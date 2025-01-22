@@ -22,13 +22,13 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Label1 = New Label()
-        Label2 = New Label()
-        Label3 = New Label()
-        Label4 = New Label()
-        Label5 = New Label()
-        Label6 = New Label()
-        Label7 = New Label()
+        lblMaklumatPelangan = New Label()
+        lblNama = New Label()
+        lblNoTel = New Label()
+        lblAlamat = New Label()
+        lblNegeri = New Label()
+        lblJantina = New Label()
+        lblKaedahBayaran = New Label()
         txtNama = New TextBox()
         txtNoTelefon = New TextBox()
         txtAlamat = New TextBox()
@@ -39,16 +39,16 @@ Partial Class Form1
         GroupBox2 = New GroupBox()
         rbtnCashless = New RadioButton()
         rbtnCash = New RadioButton()
-        Label8 = New Label()
+        lblPerisa = New Label()
         GroupBox3 = New GroupBox()
         chkPisang = New CheckBox()
         chkStrawberi = New CheckBox()
         chkCoklat = New CheckBox()
         chkKopi = New CheckBox()
         chkMilo = New CheckBox()
-        Label9 = New Label()
-        datePicker = New DateTimePicker()
-        DataGridView1 = New DataGridView()
+        lblTarikh = New Label()
+        dtePicker = New DateTimePicker()
+        dgv = New DataGridView()
         Column1 = New DataGridViewTextBoxColumn()
         Column2 = New DataGridViewTextBoxColumn()
         Column3 = New DataGridViewTextBoxColumn()
@@ -59,78 +59,78 @@ Partial Class Form1
         GroupBox1.SuspendLayout()
         GroupBox2.SuspendLayout()
         GroupBox3.SuspendLayout()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(dgv, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
-        ' Label1
+        ' lblMaklumatPelangan
         ' 
-        Label1.AutoSize = True
-        Label1.Font = New Font("Times New Roman", 13.8F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(35, 22)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(270, 26)
-        Label1.TabIndex = 0
-        Label1.Text = "MAKLUMAT PELANGGAN"
+        lblMaklumatPelangan.AutoSize = True
+        lblMaklumatPelangan.Font = New Font("Times New Roman", 13.8F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        lblMaklumatPelangan.Location = New Point(35, 22)
+        lblMaklumatPelangan.Name = "lblMaklumatPelangan"
+        lblMaklumatPelangan.Size = New Size(270, 26)
+        lblMaklumatPelangan.TabIndex = 0
+        lblMaklumatPelangan.Text = "MAKLUMAT PELANGGAN"
         ' 
-        ' Label2
+        ' lblNama
         ' 
-        Label2.AutoSize = True
-        Label2.Font = New Font("Times New Roman", 10.2F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
-        Label2.Location = New Point(35, 78)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(50, 19)
-        Label2.TabIndex = 1
-        Label2.Text = "Nama"
+        lblNama.AutoSize = True
+        lblNama.Font = New Font("Times New Roman", 10.2F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        lblNama.Location = New Point(35, 78)
+        lblNama.Name = "lblNama"
+        lblNama.Size = New Size(50, 19)
+        lblNama.TabIndex = 1
+        lblNama.Text = "Nama"
         ' 
-        ' Label3
+        ' lblNoTel
         ' 
-        Label3.AutoSize = True
-        Label3.Font = New Font("Times New Roman", 10.2F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
-        Label3.Location = New Point(35, 119)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(88, 19)
-        Label3.TabIndex = 2
-        Label3.Text = "No. Telefon"
+        lblNoTel.AutoSize = True
+        lblNoTel.Font = New Font("Times New Roman", 10.2F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        lblNoTel.Location = New Point(35, 119)
+        lblNoTel.Name = "lblNoTel"
+        lblNoTel.Size = New Size(88, 19)
+        lblNoTel.TabIndex = 2
+        lblNoTel.Text = "No. Telefon"
         ' 
-        ' Label4
+        ' lblAlamat
         ' 
-        Label4.AutoSize = True
-        Label4.Font = New Font("Times New Roman", 10.2F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
-        Label4.Location = New Point(35, 165)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(59, 19)
-        Label4.TabIndex = 3
-        Label4.Text = "Alamat"
+        lblAlamat.AutoSize = True
+        lblAlamat.Font = New Font("Times New Roman", 10.2F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        lblAlamat.Location = New Point(35, 165)
+        lblAlamat.Name = "lblAlamat"
+        lblAlamat.Size = New Size(59, 19)
+        lblAlamat.TabIndex = 3
+        lblAlamat.Text = "Alamat"
         ' 
-        ' Label5
+        ' lblNegeri
         ' 
-        Label5.AutoSize = True
-        Label5.Font = New Font("Times New Roman", 10.2F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
-        Label5.Location = New Point(35, 275)
-        Label5.Name = "Label5"
-        Label5.Size = New Size(57, 19)
-        Label5.TabIndex = 4
-        Label5.Text = "Negeri"
+        lblNegeri.AutoSize = True
+        lblNegeri.Font = New Font("Times New Roman", 10.2F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        lblNegeri.Location = New Point(35, 275)
+        lblNegeri.Name = "lblNegeri"
+        lblNegeri.Size = New Size(57, 19)
+        lblNegeri.TabIndex = 4
+        lblNegeri.Text = "Negeri"
         ' 
-        ' Label6
+        ' lblJantina
         ' 
-        Label6.AutoSize = True
-        Label6.Font = New Font("Times New Roman", 10.2F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
-        Label6.Location = New Point(35, 329)
-        Label6.Name = "Label6"
-        Label6.Size = New Size(63, 19)
-        Label6.TabIndex = 5
-        Label6.Text = "Jantina"
+        lblJantina.AutoSize = True
+        lblJantina.Font = New Font("Times New Roman", 10.2F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        lblJantina.Location = New Point(35, 329)
+        lblJantina.Name = "lblJantina"
+        lblJantina.Size = New Size(63, 19)
+        lblJantina.TabIndex = 5
+        lblJantina.Text = "Jantina"
         ' 
-        ' Label7
+        ' lblKaedahBayaran
         ' 
-        Label7.AutoSize = True
-        Label7.Font = New Font("Times New Roman", 10.2F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
-        Label7.Location = New Point(35, 418)
-        Label7.Name = "Label7"
-        Label7.Size = New Size(129, 19)
-        Label7.TabIndex = 6
-        Label7.Text = "Kaedah Bayaran"
+        lblKaedahBayaran.AutoSize = True
+        lblKaedahBayaran.Font = New Font("Times New Roman", 10.2F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        lblKaedahBayaran.Location = New Point(35, 418)
+        lblKaedahBayaran.Name = "lblKaedahBayaran"
+        lblKaedahBayaran.Size = New Size(129, 19)
+        lblKaedahBayaran.TabIndex = 6
+        lblKaedahBayaran.Text = "Kaedah Bayaran"
         ' 
         ' txtNama
         ' 
@@ -230,15 +230,15 @@ Partial Class Form1
         rbtnCash.Text = "Cash"
         rbtnCash.UseVisualStyleBackColor = True
         ' 
-        ' Label8
+        ' lblPerisa
         ' 
-        Label8.AutoSize = True
-        Label8.Font = New Font("Times New Roman", 10.2F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
-        Label8.Location = New Point(443, 78)
-        Label8.Name = "Label8"
-        Label8.Size = New Size(55, 19)
-        Label8.TabIndex = 13
-        Label8.Text = "Perisa"
+        lblPerisa.AutoSize = True
+        lblPerisa.Font = New Font("Times New Roman", 10.2F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        lblPerisa.Location = New Point(443, 78)
+        lblPerisa.Name = "lblPerisa"
+        lblPerisa.Size = New Size(55, 19)
+        lblPerisa.TabIndex = 13
+        lblPerisa.Text = "Perisa"
         ' 
         ' GroupBox3
         ' 
@@ -304,33 +304,33 @@ Partial Class Form1
         chkMilo.Text = "Milo"
         chkMilo.UseVisualStyleBackColor = True
         ' 
-        ' Label9
+        ' lblTarikh
         ' 
-        Label9.AutoSize = True
-        Label9.Font = New Font("Times New Roman", 10.2F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
-        Label9.Location = New Point(443, 217)
-        Label9.Name = "Label9"
-        Label9.Size = New Size(54, 19)
-        Label9.TabIndex = 15
-        Label9.Text = "Tarikh"
+        lblTarikh.AutoSize = True
+        lblTarikh.Font = New Font("Times New Roman", 10.2F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        lblTarikh.Location = New Point(443, 217)
+        lblTarikh.Name = "lblTarikh"
+        lblTarikh.Size = New Size(54, 19)
+        lblTarikh.TabIndex = 15
+        lblTarikh.Text = "Tarikh"
         ' 
-        ' datePicker
+        ' dtePicker
         ' 
-        datePicker.Font = New Font("Times New Roman", 9F)
-        datePicker.Location = New Point(509, 210)
-        datePicker.Name = "datePicker"
-        datePicker.Size = New Size(244, 25)
-        datePicker.TabIndex = 16
+        dtePicker.Font = New Font("Times New Roman", 9F)
+        dtePicker.Location = New Point(509, 210)
+        dtePicker.Name = "dtePicker"
+        dtePicker.Size = New Size(244, 25)
+        dtePicker.TabIndex = 16
         ' 
-        ' DataGridView1
+        ' dgv
         ' 
-        DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Columns.AddRange(New DataGridViewColumn() {Column1, Column2, Column3})
-        DataGridView1.Location = New Point(443, 275)
-        DataGridView1.Name = "DataGridView1"
-        DataGridView1.RowHeadersWidth = 51
-        DataGridView1.Size = New Size(417, 81)
-        DataGridView1.TabIndex = 17
+        dgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dgv.Columns.AddRange(New DataGridViewColumn() {Column1, Column2, Column3})
+        dgv.Location = New Point(443, 275)
+        dgv.Name = "dgv"
+        dgv.RowHeadersWidth = 51
+        dgv.Size = New Size(417, 81)
+        dgv.TabIndex = 17
         ' 
         ' Column1
         ' 
@@ -402,24 +402,24 @@ Partial Class Form1
         Controls.Add(BtnUpdate)
         Controls.Add(BtnRead)
         Controls.Add(BtnCreate)
-        Controls.Add(DataGridView1)
-        Controls.Add(datePicker)
-        Controls.Add(Label9)
+        Controls.Add(dgv)
+        Controls.Add(dtePicker)
+        Controls.Add(lblTarikh)
         Controls.Add(GroupBox3)
-        Controls.Add(Label8)
+        Controls.Add(lblPerisa)
         Controls.Add(GroupBox2)
         Controls.Add(GroupBox1)
         Controls.Add(cmbNegeri)
         Controls.Add(txtAlamat)
         Controls.Add(txtNoTelefon)
         Controls.Add(txtNama)
-        Controls.Add(Label7)
-        Controls.Add(Label6)
-        Controls.Add(Label5)
-        Controls.Add(Label4)
-        Controls.Add(Label3)
-        Controls.Add(Label2)
-        Controls.Add(Label1)
+        Controls.Add(lblKaedahBayaran)
+        Controls.Add(lblJantina)
+        Controls.Add(lblNegeri)
+        Controls.Add(lblAlamat)
+        Controls.Add(lblNoTel)
+        Controls.Add(lblNama)
+        Controls.Add(lblMaklumatPelangan)
         Name = "Form1"
         Text = "Form1"
         GroupBox1.ResumeLayout(False)
@@ -428,18 +428,18 @@ Partial Class Form1
         GroupBox2.PerformLayout()
         GroupBox3.ResumeLayout(False)
         GroupBox3.PerformLayout()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
+        CType(dgv, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
 
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label7 As Label
+    Friend WithEvents lblMaklumatPelangan As Label
+    Friend WithEvents lblNama As Label
+    Friend WithEvents lblNoTel As Label
+    Friend WithEvents lblAlamat As Label
+    Friend WithEvents lblNegeri As Label
+    Friend WithEvents lblJantina As Label
+    Friend WithEvents lblKaedahBayaran As Label
     Friend WithEvents txtNama As TextBox
     Friend WithEvents txtNoTelefon As TextBox
     Friend WithEvents txtAlamat As TextBox
@@ -450,16 +450,16 @@ Partial Class Form1
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents rbtnCashless As RadioButton
     Friend WithEvents rbtnCash As RadioButton
-    Friend WithEvents Label8 As Label
+    Friend WithEvents lblPerisa As Label
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents chkPisang As CheckBox
     Friend WithEvents chkStrawberi As CheckBox
     Friend WithEvents chkCoklat As CheckBox
     Friend WithEvents chkKopi As CheckBox
     Friend WithEvents chkMilo As CheckBox
-    Friend WithEvents Label9 As Label
-    Friend WithEvents datePicker As DateTimePicker
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents lblTarikh As Label
+    Friend WithEvents dtePicker As DateTimePicker
+    Friend WithEvents dgv As DataGridView
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
