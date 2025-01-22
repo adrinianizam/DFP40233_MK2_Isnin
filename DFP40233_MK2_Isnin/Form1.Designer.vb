@@ -34,11 +34,11 @@ Partial Class Form1
         txtAlamat = New TextBox()
         cmbNegeri = New ComboBox()
         grpJantina = New GroupBox()
-        rbtnWanita = New RadioButton()
-        rbtnLelaki = New RadioButton()
+        rbtWanita = New RadioButton()
+        rbtLelaki = New RadioButton()
         grpKaedahBayaran = New GroupBox()
-        rbtnCashless = New RadioButton()
-        rbtnCash = New RadioButton()
+        rbtCashless = New RadioButton()
+        rbtCash = New RadioButton()
         lblPerisa = New Label()
         grpPerisa = New GroupBox()
         chkPisang = New CheckBox()
@@ -165,8 +165,8 @@ Partial Class Form1
         ' 
         ' grpJantina
         ' 
-        grpJantina.Controls.Add(rbtnWanita)
-        grpJantina.Controls.Add(rbtnLelaki)
+        grpJantina.Controls.Add(rbtWanita)
+        grpJantina.Controls.Add(rbtLelaki)
         grpJantina.Font = New Font("Times New Roman", 9F)
         grpJantina.Location = New Point(185, 312)
         grpJantina.Name = "grpJantina"
@@ -174,33 +174,33 @@ Partial Class Form1
         grpJantina.TabIndex = 11
         grpJantina.TabStop = False
         ' 
-        ' rbtnWanita
+        ' rbtWanita
         ' 
-        rbtnWanita.AutoSize = True
-        rbtnWanita.Location = New Point(6, 38)
-        rbtnWanita.Name = "rbtnWanita"
-        rbtnWanita.Size = New Size(70, 21)
-        rbtnWanita.TabIndex = 1
-        rbtnWanita.TabStop = True
-        rbtnWanita.Text = "Wanita"
-        rbtnWanita.UseVisualStyleBackColor = True
+        rbtWanita.AutoSize = True
+        rbtWanita.Location = New Point(6, 38)
+        rbtWanita.Name = "rbtWanita"
+        rbtWanita.Size = New Size(70, 21)
+        rbtWanita.TabIndex = 1
+        rbtWanita.TabStop = True
+        rbtWanita.Text = "Wanita"
+        rbtWanita.UseVisualStyleBackColor = True
         ' 
-        ' rbtnLelaki
+        ' rbtLelaki
         ' 
-        rbtnLelaki.AutoSize = True
-        rbtnLelaki.Font = New Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        rbtnLelaki.Location = New Point(6, 13)
-        rbtnLelaki.Name = "rbtnLelaki"
-        rbtnLelaki.Size = New Size(65, 21)
-        rbtnLelaki.TabIndex = 0
-        rbtnLelaki.TabStop = True
-        rbtnLelaki.Text = "Lelaki"
-        rbtnLelaki.UseVisualStyleBackColor = True
+        rbtLelaki.AutoSize = True
+        rbtLelaki.Font = New Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        rbtLelaki.Location = New Point(6, 13)
+        rbtLelaki.Name = "rbtLelaki"
+        rbtLelaki.Size = New Size(65, 21)
+        rbtLelaki.TabIndex = 0
+        rbtLelaki.TabStop = True
+        rbtLelaki.Text = "Lelaki"
+        rbtLelaki.UseVisualStyleBackColor = True
         ' 
         ' grpKaedahBayaran
         ' 
-        grpKaedahBayaran.Controls.Add(rbtnCashless)
-        grpKaedahBayaran.Controls.Add(rbtnCash)
+        grpKaedahBayaran.Controls.Add(rbtCashless)
+        grpKaedahBayaran.Controls.Add(rbtCash)
         grpKaedahBayaran.Font = New Font("Times New Roman", 9F)
         grpKaedahBayaran.Location = New Point(185, 399)
         grpKaedahBayaran.Name = "grpKaedahBayaran"
@@ -208,27 +208,27 @@ Partial Class Form1
         grpKaedahBayaran.TabIndex = 12
         grpKaedahBayaran.TabStop = False
         ' 
-        ' rbtnCashless
+        ' rbtCashless
         ' 
-        rbtnCashless.AutoSize = True
-        rbtnCashless.Location = New Point(11, 46)
-        rbtnCashless.Name = "rbtnCashless"
-        rbtnCashless.Size = New Size(81, 21)
-        rbtnCashless.TabIndex = 1
-        rbtnCashless.TabStop = True
-        rbtnCashless.Text = "Cashless"
-        rbtnCashless.UseVisualStyleBackColor = True
+        rbtCashless.AutoSize = True
+        rbtCashless.Location = New Point(11, 46)
+        rbtCashless.Name = "rbtCashless"
+        rbtCashless.Size = New Size(81, 21)
+        rbtCashless.TabIndex = 1
+        rbtCashless.TabStop = True
+        rbtCashless.Text = "Cashless"
+        rbtCashless.UseVisualStyleBackColor = True
         ' 
-        ' rbtnCash
+        ' rbtCash
         ' 
-        rbtnCash.AutoSize = True
-        rbtnCash.Location = New Point(11, 16)
-        rbtnCash.Name = "rbtnCash"
-        rbtnCash.Size = New Size(59, 21)
-        rbtnCash.TabIndex = 0
-        rbtnCash.TabStop = True
-        rbtnCash.Text = "Cash"
-        rbtnCash.UseVisualStyleBackColor = True
+        rbtCash.AutoSize = True
+        rbtCash.Location = New Point(11, 16)
+        rbtCash.Name = "rbtCash"
+        rbtCash.Size = New Size(59, 21)
+        rbtCash.TabIndex = 0
+        rbtCash.TabStop = True
+        rbtCash.Text = "Cash"
+        rbtCash.UseVisualStyleBackColor = True
         ' 
         ' lblPerisa
         ' 
@@ -445,11 +445,11 @@ Partial Class Form1
     Friend WithEvents txtAlamat As TextBox
     Friend WithEvents cmbNegeri As ComboBox
     Friend WithEvents grpJantina As GroupBox
-    Friend WithEvents rbtnWanita As RadioButton
-    Friend WithEvents rbtnLelaki As RadioButton
+    Friend WithEvents rbtWanita As RadioButton
+    Friend WithEvents rbtLelaki As RadioButton
     Friend WithEvents grpKaedahBayaran As GroupBox
-    Friend WithEvents rbtnCashless As RadioButton
-    Friend WithEvents rbtnCash As RadioButton
+    Friend WithEvents rbtCashless As RadioButton
+    Friend WithEvents rbtCash As RadioButton
     Friend WithEvents lblPerisa As Label
     Friend WithEvents grpPerisa As GroupBox
     Friend WithEvents chkPisang As CheckBox
