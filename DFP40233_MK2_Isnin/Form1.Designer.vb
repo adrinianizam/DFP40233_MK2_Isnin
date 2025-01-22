@@ -33,33 +33,33 @@ Partial Class Form1
         txtNoTelefon = New TextBox()
         txtAlamat = New TextBox()
         cmbNegeri = New ComboBox()
-        GroupBox1 = New GroupBox()
+        grpJantina = New GroupBox()
         rbtnWanita = New RadioButton()
         rbtnLelaki = New RadioButton()
-        GroupBox2 = New GroupBox()
+        grpKaedahBayaran = New GroupBox()
         rbtnCashless = New RadioButton()
         rbtnCash = New RadioButton()
         lblPerisa = New Label()
-        GroupBox3 = New GroupBox()
+        grpPerisa = New GroupBox()
         chkPisang = New CheckBox()
         chkStrawberi = New CheckBox()
         chkCoklat = New CheckBox()
         chkKopi = New CheckBox()
         chkMilo = New CheckBox()
         lblTarikh = New Label()
-        dtePicker = New DateTimePicker()
-        dgv = New DataGridView()
-        Column1 = New DataGridViewTextBoxColumn()
-        Column2 = New DataGridViewTextBoxColumn()
-        Column3 = New DataGridViewTextBoxColumn()
+        dteTarikh = New DateTimePicker()
+        dgvTable = New DataGridView()
         BtnCreate = New Button()
         BtnRead = New Button()
         BtnUpdate = New Button()
         BtnDelete = New Button()
-        GroupBox1.SuspendLayout()
-        GroupBox2.SuspendLayout()
-        GroupBox3.SuspendLayout()
-        CType(dgv, ComponentModel.ISupportInitialize).BeginInit()
+        clmBil = New DataGridViewTextBoxColumn()
+        clmNama = New DataGridViewTextBoxColumn()
+        clmNoTel = New DataGridViewTextBoxColumn()
+        grpJantina.SuspendLayout()
+        grpKaedahBayaran.SuspendLayout()
+        grpPerisa.SuspendLayout()
+        CType(dgvTable, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' lblMaklumatPelangan
@@ -163,16 +163,16 @@ Partial Class Form1
         cmbNegeri.Size = New Size(188, 28)
         cmbNegeri.TabIndex = 10
         ' 
-        ' GroupBox1
+        ' grpJantina
         ' 
-        GroupBox1.Controls.Add(rbtnWanita)
-        GroupBox1.Controls.Add(rbtnLelaki)
-        GroupBox1.Font = New Font("Times New Roman", 9F)
-        GroupBox1.Location = New Point(185, 312)
-        GroupBox1.Name = "GroupBox1"
-        GroupBox1.Size = New Size(188, 68)
-        GroupBox1.TabIndex = 11
-        GroupBox1.TabStop = False
+        grpJantina.Controls.Add(rbtnWanita)
+        grpJantina.Controls.Add(rbtnLelaki)
+        grpJantina.Font = New Font("Times New Roman", 9F)
+        grpJantina.Location = New Point(185, 312)
+        grpJantina.Name = "grpJantina"
+        grpJantina.Size = New Size(188, 68)
+        grpJantina.TabIndex = 11
+        grpJantina.TabStop = False
         ' 
         ' rbtnWanita
         ' 
@@ -197,16 +197,16 @@ Partial Class Form1
         rbtnLelaki.Text = "Lelaki"
         rbtnLelaki.UseVisualStyleBackColor = True
         ' 
-        ' GroupBox2
+        ' grpKaedahBayaran
         ' 
-        GroupBox2.Controls.Add(rbtnCashless)
-        GroupBox2.Controls.Add(rbtnCash)
-        GroupBox2.Font = New Font("Times New Roman", 9F)
-        GroupBox2.Location = New Point(185, 399)
-        GroupBox2.Name = "GroupBox2"
-        GroupBox2.Size = New Size(193, 77)
-        GroupBox2.TabIndex = 12
-        GroupBox2.TabStop = False
+        grpKaedahBayaran.Controls.Add(rbtnCashless)
+        grpKaedahBayaran.Controls.Add(rbtnCash)
+        grpKaedahBayaran.Font = New Font("Times New Roman", 9F)
+        grpKaedahBayaran.Location = New Point(185, 399)
+        grpKaedahBayaran.Name = "grpKaedahBayaran"
+        grpKaedahBayaran.Size = New Size(193, 77)
+        grpKaedahBayaran.TabIndex = 12
+        grpKaedahBayaran.TabStop = False
         ' 
         ' rbtnCashless
         ' 
@@ -240,19 +240,19 @@ Partial Class Form1
         lblPerisa.TabIndex = 13
         lblPerisa.Text = "Perisa"
         ' 
-        ' GroupBox3
+        ' grpPerisa
         ' 
-        GroupBox3.Controls.Add(chkPisang)
-        GroupBox3.Controls.Add(chkStrawberi)
-        GroupBox3.Controls.Add(chkCoklat)
-        GroupBox3.Controls.Add(chkKopi)
-        GroupBox3.Controls.Add(chkMilo)
-        GroupBox3.Font = New Font("Times New Roman", 9F)
-        GroupBox3.Location = New Point(509, 60)
-        GroupBox3.Name = "GroupBox3"
-        GroupBox3.Size = New Size(203, 114)
-        GroupBox3.TabIndex = 14
-        GroupBox3.TabStop = False
+        grpPerisa.Controls.Add(chkPisang)
+        grpPerisa.Controls.Add(chkStrawberi)
+        grpPerisa.Controls.Add(chkCoklat)
+        grpPerisa.Controls.Add(chkKopi)
+        grpPerisa.Controls.Add(chkMilo)
+        grpPerisa.Font = New Font("Times New Roman", 9F)
+        grpPerisa.Location = New Point(509, 60)
+        grpPerisa.Name = "grpPerisa"
+        grpPerisa.Size = New Size(203, 114)
+        grpPerisa.TabIndex = 14
+        grpPerisa.TabStop = False
         ' 
         ' chkPisang
         ' 
@@ -314,44 +314,23 @@ Partial Class Form1
         lblTarikh.TabIndex = 15
         lblTarikh.Text = "Tarikh"
         ' 
-        ' dtePicker
+        ' dteTarikh
         ' 
-        dtePicker.Font = New Font("Times New Roman", 9F)
-        dtePicker.Location = New Point(509, 210)
-        dtePicker.Name = "dtePicker"
-        dtePicker.Size = New Size(244, 25)
-        dtePicker.TabIndex = 16
+        dteTarikh.Font = New Font("Times New Roman", 9F)
+        dteTarikh.Location = New Point(509, 210)
+        dteTarikh.Name = "dteTarikh"
+        dteTarikh.Size = New Size(244, 25)
+        dteTarikh.TabIndex = 16
         ' 
-        ' dgv
+        ' dgvTable
         ' 
-        dgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgv.Columns.AddRange(New DataGridViewColumn() {Column1, Column2, Column3})
-        dgv.Location = New Point(443, 275)
-        dgv.Name = "dgv"
-        dgv.RowHeadersWidth = 51
-        dgv.Size = New Size(417, 81)
-        dgv.TabIndex = 17
-        ' 
-        ' Column1
-        ' 
-        Column1.HeaderText = "Bil."
-        Column1.MinimumWidth = 6
-        Column1.Name = "Column1"
-        Column1.Width = 125
-        ' 
-        ' Column2
-        ' 
-        Column2.HeaderText = "Nama"
-        Column2.MinimumWidth = 6
-        Column2.Name = "Column2"
-        Column2.Width = 125
-        ' 
-        ' Column3
-        ' 
-        Column3.HeaderText = "No. Tel"
-        Column3.MinimumWidth = 6
-        Column3.Name = "Column3"
-        Column3.Width = 125
+        dgvTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dgvTable.Columns.AddRange(New DataGridViewColumn() {clmBil, clmNama, clmNoTel})
+        dgvTable.Location = New Point(443, 275)
+        dgvTable.Name = "dgvTable"
+        dgvTable.RowHeadersWidth = 51
+        dgvTable.Size = New Size(417, 81)
+        dgvTable.TabIndex = 17
         ' 
         ' BtnCreate
         ' 
@@ -393,6 +372,27 @@ Partial Class Form1
         BtnDelete.Text = "Delete"
         BtnDelete.UseVisualStyleBackColor = True
         ' 
+        ' clmBil
+        ' 
+        clmBil.HeaderText = "Bil."
+        clmBil.MinimumWidth = 6
+        clmBil.Name = "clmBil"
+        clmBil.Width = 125
+        ' 
+        ' clmNama
+        ' 
+        clmNama.HeaderText = "Nama"
+        clmNama.MinimumWidth = 6
+        clmNama.Name = "clmNama"
+        clmNama.Width = 125
+        ' 
+        ' clmNoTel
+        ' 
+        clmNoTel.HeaderText = "No. Tel"
+        clmNoTel.MinimumWidth = 6
+        clmNoTel.Name = "clmNoTel"
+        clmNoTel.Width = 125
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -402,13 +402,13 @@ Partial Class Form1
         Controls.Add(BtnUpdate)
         Controls.Add(BtnRead)
         Controls.Add(BtnCreate)
-        Controls.Add(dgv)
-        Controls.Add(dtePicker)
+        Controls.Add(dgvTable)
+        Controls.Add(dteTarikh)
         Controls.Add(lblTarikh)
-        Controls.Add(GroupBox3)
+        Controls.Add(grpPerisa)
         Controls.Add(lblPerisa)
-        Controls.Add(GroupBox2)
-        Controls.Add(GroupBox1)
+        Controls.Add(grpKaedahBayaran)
+        Controls.Add(grpJantina)
         Controls.Add(cmbNegeri)
         Controls.Add(txtAlamat)
         Controls.Add(txtNoTelefon)
@@ -422,13 +422,13 @@ Partial Class Form1
         Controls.Add(lblMaklumatPelangan)
         Name = "Form1"
         Text = "Form1"
-        GroupBox1.ResumeLayout(False)
-        GroupBox1.PerformLayout()
-        GroupBox2.ResumeLayout(False)
-        GroupBox2.PerformLayout()
-        GroupBox3.ResumeLayout(False)
-        GroupBox3.PerformLayout()
-        CType(dgv, ComponentModel.ISupportInitialize).EndInit()
+        grpJantina.ResumeLayout(False)
+        grpJantina.PerformLayout()
+        grpKaedahBayaran.ResumeLayout(False)
+        grpKaedahBayaran.PerformLayout()
+        grpPerisa.ResumeLayout(False)
+        grpPerisa.PerformLayout()
+        CType(dgvTable, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -444,28 +444,28 @@ Partial Class Form1
     Friend WithEvents txtNoTelefon As TextBox
     Friend WithEvents txtAlamat As TextBox
     Friend WithEvents cmbNegeri As ComboBox
-    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents grpJantina As GroupBox
     Friend WithEvents rbtnWanita As RadioButton
     Friend WithEvents rbtnLelaki As RadioButton
-    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents grpKaedahBayaran As GroupBox
     Friend WithEvents rbtnCashless As RadioButton
     Friend WithEvents rbtnCash As RadioButton
     Friend WithEvents lblPerisa As Label
-    Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents grpPerisa As GroupBox
     Friend WithEvents chkPisang As CheckBox
     Friend WithEvents chkStrawberi As CheckBox
     Friend WithEvents chkCoklat As CheckBox
     Friend WithEvents chkKopi As CheckBox
     Friend WithEvents chkMilo As CheckBox
     Friend WithEvents lblTarikh As Label
-    Friend WithEvents dtePicker As DateTimePicker
-    Friend WithEvents dgv As DataGridView
-    Friend WithEvents Column1 As DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As DataGridViewTextBoxColumn
-    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents dteTarikh As DateTimePicker
+    Friend WithEvents dgvTable As DataGridView
     Friend WithEvents BtnCreate As Button
     Friend WithEvents BtnRead As Button
     Friend WithEvents BtnUpdate As Button
     Friend WithEvents BtnDelete As Button
+    Friend WithEvents clmBil As DataGridViewTextBoxColumn
+    Friend WithEvents clmNama As DataGridViewTextBoxColumn
+    Friend WithEvents clmNoTel As DataGridViewTextBoxColumn
 
 End Class
